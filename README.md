@@ -144,7 +144,3 @@ Are passed to the wrapping div that does the scrolling (this is not Wrapper, tha
     return <div ref={ref}>Something is {size.width} x {size.height} at {size.left}, {size.top} </div>
 
 ````
-
-
-
-# virtual-list

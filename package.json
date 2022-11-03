@@ -1,0 +1,58 @@
+{
+  "name": "@devoinc/virtual-list",
+  "version": "1.0.0",
+  "private": false,
+  "license": "MIT",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": "https://github.com/DevoInc/virtual-list.git",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.19.4",
+    "@babel/preset-react": "^7.9.4",
+    "@material-ui/core": "^4.9.11",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "react-scripts": "3.4.1",
+    "versiony-cli": "^1.3.0"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "resize-observer-polyfill": "^1.5.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "./scripts/build.sh",
+    "push": "node ./node_modules/versiony-cli/bin/cli.js ./package.json --patch && npm run build && npm publish && git add . && git commit -am build && git push",
+    "watch": "NODE_ENV=production babel src/component --watch --ignore \"__tests__\",\"**/*.spec.js\",\"**/*.test.js\",\"__snapshots__\" --out-dir dist",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
